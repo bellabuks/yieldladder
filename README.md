@@ -2,9 +2,6 @@
 
 Time-locked USDC vaults on Soroban with auto-routed AMM yield.
 
-[![audit](https://img.shields.io/badge/audit-pending-yellow.svg)](audit/)
-[![version](https://img.shields.io/badge/protocol-v0.3.0-informational.svg)](CHANGELOG.md)
-
 ## Abstract
 
 YieldLadder is a savings primitive on the Stellar network. A user deposits USDC into one of four time-locked vaults — Flex, 3-month, 6-month, or 12-month — and receives a non-transferable position representing their share. The protocol routes deposited USDC into a curated set of Stellar AMM liquidity pools, harvests trading fees on a fixed cadence, compounds harvested yield back into the position, and distributes yield to depositors proportional to share weight and lock duration.
