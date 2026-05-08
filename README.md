@@ -4,9 +4,9 @@ Time-locked USDC vaults on Soroban with auto-routed AMM yield.
 
 ## Abstract
 
-YieldLadder is a savings primitive on the Stellar network. A user deposits USDC into one of four time-locked vaults — Flex, 3-month, 6-month, or 12-month — and receives a non-transferable position representing their share. The protocol routes deposited USDC into a curated set of Stellar AMM liquidity pools, harvests trading fees on a fixed cadence, compounds harvested yield back into the position, and distributes yield to depositors proportional to share weight and lock duration.
+YieldLadder is a savings primitive on the Stellar network. A user deposits USDC into one of four time-locked vaults. Flex, 3-month, 6-month, or 12-month, and receives a non-transferable position representing their share. The protocol routes deposited USDC into a curated set of Stellar AMM liquidity pools, harvests trading fees on a fixed cadence, compounds harvested yield back into the position, and distributes yield to depositors proportional to share weight and lock duration.
 
-The protocol is non-custodial and immutable per deployment. Yield is sourced exclusively from on-chain Stellar liquidity pools — no off-chain CeFi venues, no anchor lending, no rehypothecation. The only privileged role is the Strategist, who can propose new pool allocations subject to a 72-hour timelock and a hard-coded per-pool exposure cap.
+The protocol is non-custodial and immutable per deployment. Yield is sourced exclusively from on-chain Stellar liquidity pools, no off-chain CeFi venues, no anchor lending, no rehypothecation. The only privileged role is the Strategist, who can propose new pool allocations subject to a 72-hour timelock and a hard-coded per-pool exposure cap.
 
 ## Vault tiers
 
@@ -45,7 +45,7 @@ Early-exit fees are charged against principal at withdrawal time and redistribut
 
 The Vault Router is the user-facing contract; it enforces tier rules and mints position records. Each tier vault holds depositor balances and a reference to the Strategy Vault. The Strategy Vault holds the protocol's working capital and executes allocations across the pool set, subject to per-pool exposure caps.
 
-The Harvester is a permissionless contract — anyone can call its `harvest()` entrypoint after the cooldown elapses. The caller receives a small bounty (10 bps of harvested yield) to incentivize timely calls without requiring a privileged keeper.
+The Harvester is a permissionless contract: anyone can call its `harvest()` entrypoint after the cooldown elapses. The caller receives a small bounty (10 bps of harvested yield) to incentivize timely calls without requiring a privileged keeper.
 
 ## Vault mechanics
 
