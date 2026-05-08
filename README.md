@@ -1,7 +1,5 @@
 ![YieldLadder](./yieldladder.PNG)
 
-# YieldLadder
-
 Time-locked USDC vaults on Soroban with auto-routed AMM yield.
 
 ## Abstract
