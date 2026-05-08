@@ -16,7 +16,7 @@ const FEATURES = [
   {
     icon: '🔒',
     title: 'Non-Custodial',
-    body: 'Contracts are immutable — no admin can modify rules or move funds. Your position is permanently on-chain.',
+    body: 'Contracts are immutable. No admin can modify rules or move funds. Your position is permanently on-chain.',
   },
   {
     icon: '🛡',
@@ -46,7 +46,7 @@ export default function Home() {
           </h1>
           <p className={styles.heroSub}>
             Deposit USDC into time-locked vaults. YieldLadder auto-routes capital into curated
-            Stellar AMM pools and compounds yield back into your position — fully on-chain, no middlemen.
+            Stellar AMM pools and compounds yield back into your position, fully on-chain, no middlemen.
           </p>
           <div className={styles.heroCtas}>
             <a href="#vaults" className={styles.btnPrimary}>View Vaults</a>
@@ -90,7 +90,7 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Choose Your Vault</h2>
           <p className={styles.sectionSub}>
             Longer locks earn higher share-weight multipliers, capturing a larger slice of every harvest.
-            Early exit is always available — fees are redistributed to remaining depositors, not the protocol.
+            Early exit is always available; fees are redistributed to remaining depositors, not the protocol.
           </p>
         </div>
         <div className={styles.vaultGrid}>
@@ -132,7 +132,7 @@ export default function Home() {
             <h3 className={styles.stepTitle}>Deposit USDC</h3>
             <p className={styles.stepBody}>
               Choose a vault tier and deposit USDC. Your position is non-transferable
-              and tied to your wallet — no position tokens to manage or secure.
+              and tied to your wallet, with no position tokens to manage or secure.
             </p>
           </div>
           <div className={styles.stepArrow}>→</div>
@@ -141,7 +141,7 @@ export default function Home() {
             <h3 className={styles.stepTitle}>Yield Accrues</h3>
             <p className={styles.stepBody}>
               Capital is routed to curated Stellar AMM pools. Trading fees compound
-              automatically at every harvest cycle — no manual claiming needed.
+              automatically at every harvest cycle, with no manual claiming needed.
             </p>
           </div>
           <div className={styles.stepArrow}>→</div>
