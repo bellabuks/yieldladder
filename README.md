@@ -210,7 +210,3 @@ The SDK source lives in `sdks/typescript/` and targets `@stellar/stellar-sdk` v1
 | **Strategist** | A role that can propose pool allocation changes under timelock. Cannot move user funds. |
 | **Guardian Multisig** | A 4-of-7 multisig authorised to veto Strategist proposals during the 72-hour window. Cannot move user funds. |
 | **Allocation cap** | Hard-coded maximum fraction of Strategy Vault assets per AMM pool. Currently 35%. |
-
-## License
-
-Apache 2.0. See `LICENSE` for the full text.
